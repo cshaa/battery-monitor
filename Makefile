@@ -1,6 +1,6 @@
 CFLAGS:="-DPICO_BOARD=pico $(CFLAGS)"
 
-.PHONY: clean build flash
+.PHONY: clean build flash serve
 
 clean:
 	@rm -rf sensor/build
@@ -12,3 +12,6 @@ build:
 
 flash:
 	@picotool load -f sensor/build/main.uf2
+
+serve:
+	@./server/main.ts
