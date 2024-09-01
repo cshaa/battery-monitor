@@ -1,14 +1,14 @@
 CFLAGS:="-DPICO_BOARD=pico $(CFLAGS)"
 
-.PHONY: clean build
+.PHONY: clean build flash
 
 clean:
-	@rm -rf build
+	@rm -rf sensor/build
 
 build:
-	@mkdir -p build
-	@cd build; cmake .. $(CFLAGS)
-	@cd build; make main
+	@cd sensor; mkdir -p build
+	@cd sensor/build; cmake .. $(CFLAGS)
+	@cd sensor/build; make main
 
 flash:
-	@picotool load -f build/main.uf2
+	@picotool load -f sensor/build/main.uf2

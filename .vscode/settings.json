@@ -1,3 +1,11 @@
 {
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "stdlib.h": "c",
+    "pico.h": "c",
+    "types.h": "c"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  }
 }
